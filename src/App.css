@@ -1,0 +1,88 @@
+/* COMMON */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  transition: background 0.4s;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 700px;
+  padding: 30px;
+  border-radius: 10px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-select {
+  padding: 6px;
+}
+
+/* 🌤 LIGHT */
+.page.light {
+  background: #f4f6f8;
+}
+.page.light .card {
+  background: #ffffff;
+  color: #000;
+}
+
+/* 🌙 DARK */
+.page.dark {
+  background: #121212;
+}
+.page.dark .card {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* 🌌 NIGHT (eye comfort) */
+.page.night {
+  background: #0b132b;
+}
+.page.night .card {
+  background: #1c2541;
+  color: #eaeaea;
+}
+
+/* 💙 BLUE */
+.page.blue {
+  background: #e3f2fd;
+}
+.page.blue .card {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+/* 💚 GREEN */
+.page.green {
+  background: #e8f5e9;
+}
+.page.green .card {
+  background: #c8e6c9;
+  color: #1b5e20;
+}
+
+/* 💜 PURPLE */
+.page.purple {
+  background: #f3e5f5;
+}
+.page.purple .card {
+  background: #e1bee7;
+  color: #4a148c;
+}
+
+/* TODO ITEM */
+.todo-item {
+  background: rgba(255,255,255,0.8);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
