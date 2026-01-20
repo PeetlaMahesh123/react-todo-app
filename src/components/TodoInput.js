@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 
 function TodoInput({ addTodo }) {
-  const [text, setText] = useState("");
+  const [task, setTask] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("Programming");
+  const [when, setWhen] = useState("");
   const [priority, setPriority] = useState("Medium");
+  const [fulfillment, setFulfillment] = useState(0);
 
   const submitTodo = () => {
-    if (!text.trim()) return;
-    addTodo(text, priority);
-    setText("");
+    if (!task.trim()) return;
+    addTodo(task, description, category, when, priority, fulfillment);
+    setTask("");
+    setDescription("");
+    setCategory("Programming");
+    setWhen("");
+    setPriority("Medium");
+    setFulfillment(0);
   };
 
   return (
-    <div className="input-box">
-      <input
-        type="text"
-        value={text}
-        placeholder="Add task..."
-        onChange={(e) => setText(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && submitTodo()}
-      />
-
-      <select onChange={(e) => setPriority(e.target.value)}>
-        <option>High</option>
-        <option>Medium</option>
-        <option>Low</option>
-      </select>
-
-      <button onClick={submitTodo}>Add</button>
-    </div>
+    <input
+      type="text"
+      value={task}
+      placeholder="Add a new to-do"
+      onChange={(e) => setTask(e.target.value)}
+      onKeyDown={(e) => e.key === "Enter" && submitTodo()}
+      className="input-field"
+    />
   );
 }
 
