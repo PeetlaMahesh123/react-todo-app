@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 ---
 ## Live Link of Project:
-https://peetlamahesh123.github.io/react-todo-app/
+
 
 ---
 ## Final Result
